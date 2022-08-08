@@ -5,6 +5,10 @@ import { useRouter } from "next/router";
 import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
 import UserDropdown from "components/Dropdowns/UserDropdown.js";
 
+const renderTable=(data)=>{
+  data
+}
+
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   const router = useRouter();
@@ -89,6 +93,29 @@ export default function Sidebar() {
             {/* Navigation */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
+            <li className="items-center">
+                <Link href="/admin/users">
+                  <a
+                    href="#pablo"
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/users") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-table mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/users") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    Users
+                  </a>
+                </Link>
+              </li>
               <li className="items-center">
                 <Link href="/admin/dashboard">
                   <a

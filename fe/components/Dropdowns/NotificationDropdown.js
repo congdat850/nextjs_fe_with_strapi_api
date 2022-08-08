@@ -70,7 +70,7 @@ const NotificationDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Seprated link
+          Logout
         </a>
       </div>
     </>
