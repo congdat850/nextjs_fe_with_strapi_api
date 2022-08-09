@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+module.exports = ({ env }) => ({ // config db
   defaultConnection: 'default',
   connections: {
     default: {

@@ -5,4 +5,9 @@
  * to customize this model
  */
 
-module.exports = {};
+module.exports = {
+
+    // afterFetchAll: async(model,response,options)=>{
+
+    // }
+};
