@@ -4,16 +4,18 @@ import RenderTable from "components/RenderTable";
 
 // components
 
-import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
 export default function CardTable({ color = "light", res = { } }) {
-  const titles = ["id", "User name", "email", "role"];
+  const schema = {
+    title:"Users",
+    columnName : ["id", "user name", "email", "created at"]
+  };
   const [data, setData] = useState({});
 
   useEffect(() => {
     setData(res);
   }, [res]);
-  return <RenderTable titles={titles} items={data.data || []} />;
+  return <RenderTable schema={schema} items={data.data || []} />;
 }
 
 CardTable.defaultProps = {

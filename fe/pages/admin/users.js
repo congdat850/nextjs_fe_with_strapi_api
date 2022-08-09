@@ -22,7 +22,6 @@ export default function Users() {
         email:e.email,
         created_at:e.created_at,
       }))] });
-      console.log("res", res);
     }
   }, []);
   return (
